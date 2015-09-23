@@ -1,0 +1,64 @@
+
+mysql> CREATE DATABASE decodemtl_addressbook;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> USE decodemtl_addressbook;
+Database changed
+
+mysql> CREATE TABLE Account (                                                                                                                               
+    -> id INT not null auto_increment,
+    -> PRIMARY KEY(id),
+    -> email VARCHAR(255) not null,
+    -> password VARCHAR(40) not null,
+    -> createdOn DATETIME not null,
+    -> modifiedOn DATETIME not null);
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> CREATE TABLE AddressBook (
+    -> id INT not null auto_increment PRIMARY KEY,
+    -> accountId INT not null,
+    -> name VARCHAR(255),
+    -> createdOn DATETIME not null,
+    -> modifiedOn DATETIME not null);
+Query OK, 0 rows affected (0.01 sec)
+    
+mysql> CREATE TABLE Entry (
+    -> id INT not null auto_increment PRIMARY KEY,
+    -> addressBookId INT not null,
+    -> firstName VARCHAR(255) not null,
+    -> lastName VARCHAR(255),
+    -> birthday DATETIME);
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> ALTER TABLE Entry ADD COLUMN type ENUM ('phone', 'address', 'electronic-mail');
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> CREATE TABLE Phone (
+    -> id INT not null auto_increment PRIMARY KEY,                                                                                                          
+    -> entryId INT not null,
+    -> type ENUM ('home', 'work', 'other'),                                                                                                          
+    -> subtype ENUM ('landline', 'cellular', 'fax'),
+    -> content VARCHAR(255) not null);
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> CREATE TABLE Address (
+    -> id INT not null auto_increment PRIMARY KEY,
+    -> entryId INT not null,
+    -> type ENUM ('home', 'work', 'other'),
+    -> addressLine1 VARCHAR(255) not null,
+    -> addressLine2 VARCHAR(255),
+    -> city VARCHAR(255) not null,
+    -> province VARCHAR(128),
+    -> country VARCHAR(128) not null,
+    -> postalCode VARCHAR (10));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> CREATE TABLE ElectronicMail (                                                                                                                        
+    -> id INT not null auto_increment PRIMARY KEY,
+    -> entryId INT not null,
+    -> type ENUM ('home', 'work', 'other'),
+    -> content VARCHAR(255) not null);
+Query OK, 0 rows affected (0.02 sec)
+
+
