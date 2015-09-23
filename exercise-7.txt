@@ -1,0 +1,23 @@
+
+mysql> SELECT SUBSTRING_INDEX(ElectronicMail.content, "@", -1) AS DomainName
+    -> FROM ElectronicMail
+    -> GROUP BY DomainName;
+
+(.......)
+
+| vulputate.net                     |
+| vulputate.org                     |
+| vulputatedui.com                  |
+| vulputateduinec.org               |
+| vulputateeu.org                   |
+| vulputatelacus.edu                |
+| vulputatelacus.org                |
+| vulputatemaurissagittis.ca        |
+| vulputateposuere.ca               |
+| vulputateposuere.org              |
+| vulputateposuerevulputate.com     |
+| vulputaterisus.com                |
+| vulputaterisus.net                |
+| vulputatevelit.org                |
++-----------------------------------+
+1983 rows in set (0.00 sec)
