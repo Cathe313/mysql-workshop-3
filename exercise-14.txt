@@ -1,0 +1,221 @@
+
+
+mysql> SELECT content AS "Fax number" FROM Phone WHERE subtype="fax" && id BETWEEN 1980 AND 2025;                                     
++----------------+
+| Fax number     |
++----------------+
+| (259) 576-6043 |
+| (100) 854-2778 |
+| (628) 686-5828 |
+| (781) 250-9787 |
+| (511) 271-1922 |
+| (878) 528-0091 |
+| (894) 308-0955 |
+| (841) 610-0236 |
+| (995) 731-6966 |
+| (940) 961-7788 |
+| 1-923-788-5890 |
+| 1-338-670-3648 |
+| 1-257-867-0566 |
+| 1-436-895-8796 |
+| 1-889-800-9270 |
++----------------+
+30 rows in set (0.00 sec)
+
+mysql> UPDATE Phone SET content=REPLACE(content, "-", "") WHERE subtype="fax";
+Query OK, 660 rows affected (0.06 sec)
+Rows matched: 660  Changed: 660  Warnings: 0
+
+mysql> UPDATE Phone SET content=REPLACE(content, " ", "") WHERE subtype="fax";                                                                              
+Query OK, 600 rows affected (0.03 sec)
+Rows matched: 660  Changed: 600  Warnings: 0
+
+mysql> UPDATE Phone SET content=REPLACE(content, "(", "") WHERE subtype="fax";                                                                              
+Query OK, 600 rows affected (0.04 sec)
+Rows matched: 660  Changed: 600  Warnings: 0
+
+mysql> UPDATE Phone SET content=REPLACE(content, ")", "") WHERE subtype="fax";                                                                              
+Query OK, 600 rows affected (0.04 sec)
+Rows matched: 660  Changed: 600  Warnings: 0
+
+
+mysql> SELECT content AS "Fax number" FROM Phone WHERE subtype="fax" && id BETWEEN 1980 AND 2025;
++-------------+
+| Fax number  |
++-------------+
+| 2595766043  |
+| 1008542778  |
+| 6286865828  |
+| 7812509787  |
+| 5112711922  |
+| 8785280091  |
+| 8943080955  |
+| 8416100236  |
+| 9957316966  |
+| 9409617788  |
+| 19237885890 |
+| 13386703648 |
+| 12578670566 |
+| 14368958796 |
+| 18898009270 |
++-------------+
+15 rows in set (0.00 sec)
+
+mysql> UPDATE Phone SET content=REVERSE(content) WHERE subtype="fax";                                                                              
+Query OK, 660 rows affected (0.03 sec)
+Rows matched: 660  Changed: 660  Warnings: 0
+
+mysql> UPDATE Phone SET content=INSERT(content, 2, 0, "-") WHERE subtype="fax" && LENGTH(content)=11;                                                      
+Query OK, 60 rows affected (0.01 sec)
+Rows matched: 60  Changed: 60  Warnings: 0
+
+mysql> UPDATE Phone SET content=INSERT(content, 6, 0, "-") WHERE subtype="fax" && LENGTH(content)=12;                                                      
+Query OK, 60 rows affected (0.00 sec)
+Rows matched: 60  Changed: 60  Warnings: 0
+
+mysql> UPDATE Phone SET content=INSERT(content, 10, 0, "-")  WHERE subtype="fax" && LENGTH(content)=13;                                                     
+Query OK, 60 rows affected (0.01 sec)
+Rows matched: 60  Changed: 60  Warnings: 0
+
+mysql> UPDATE Phone SET content=INSERT(content, 1, 0, "(")  WHERE subtype="fax" && LENGTH(content)=10;                                                      
+Query OK, 600 rows affected (0.03 sec)
+Rows matched: 600  Changed: 600  Warnings: 0
+
+mysql> UPDATE Phone SET content=INSERT(content, 5, 0, ") ")  WHERE subtype="fax" && LENGTH(content)=11;
+Query OK, 600 rows affected (0.03 sec)
+Rows matched: 600  Changed: 600  Warnings: 0
+
+mysql> UPDATE Phone SET content=INSERT(content, 10, 0, "-")  WHERE subtype="fax" && LENGTH(content)=13;                                                     
+Query OK, 600 rows affected (0.04 sec)
+Rows matched: 600  Changed: 600  Warnings: 0
+
+
+mysql> SELECT content AS "Fax number" FROM Phone WHERE subtype="fax";
+
+(.....)
+
+| (517) 438-5314 |
+| (331) 332-7696 |
+| (659) 164-9881 |
+| (596) 782-1646 |
+| (279) 772-5465 |
+| (577) 333-3992 |
+| (292) 371-2824 |
+| (639) 600-9705 |
+| (715) 119-2313 |
+| (417) 377-2911 |
+| (214) 721-4639 |
+| (522) 758-4734 |
+| (947) 637-9863 |
+| (114) 988-8068 |
+| (778) 848-5762 |
+| (356) 873-9104 |
+| (640) 572-4111 |
+| (238) 398-4554 |
+| (981) 373-2256 |
+| (181) 397-6863 |
+| (661) 091-5316 |
+| (434) 481-2741 |
+| (713) 246-3871 |
+| (938) 857-8607 |
+| (983) 844-4361 |
+| (686) 369-8866 |
+| (839) 686-6527 |
+| (549) 619-1455 |
+| (042) 803-5008 |
+| (676) 416-2358 |
+| (131) 951-9116 |
+| (786) 742-4541 |
+| (548) 507-2351 |
+| (616) 462-4491 |
+| (680) 925-6201 |
+| (109) 373-4716 |
+| (921) 688-9774 |
+| (611) 363-6717 |
+| (568) 333-8588 |
+| (845) 040-6803 |
+| (097) 502-7888 |
+| (210) 603-1812 |
+| (000) 678-5367 |
+| (477) 801-9069 |
+| (210) 237-3816 |
+| (324) 439-2586 |
+| (656) 757-6657 |
+| (798) 245-5971 |
+| (361) 819-4633 |
+| (602) 155-6359 |
+| (340) 667-5952 |
+| (877) 245-8001 |
+| (828) 568-6826 |
+| (787) 905-2187 |
+| (229) 117-2115 |
+| (190) 082-5878 |
+| (559) 080-3498 |
+| (632) 001-6148 |
+| (669) 613-7599 |
+| (887) 716-9049 |
+| 0-985-887-3291 |
+| 8-463-076-8331 |
+| 6-650-768-7521 |
+| 6-978-598-6341 |
+| 0-729-008-9881 |
+| 0-514-836-3031 |
+| 4-588-858-6251 |
+| 1-068-727-0251 |
+| 5-856-774-5971 |
+| 8-988-174-2621 |
+| 7-845-439-3121 |
+| 2-663-623-9161 |
+| 1-359-667-8951 |
+| 7-982-547-6821 |
+| 8-162-099-1181 |
+| 2-993-294-0141 |
+| 7-306-571-9671 |
+| 1-111-391-6331 |
+| 0-253-751-6111 |
+| 9-584-038-4291 |
+| 0-327-808-0561 |
+| 6-039-234-3781 |
+| 1-124-718-1621 |
+| 6-939-429-7481 |
+| 8-208-357-5531 |
+| 8-359-627-7831 |
+| 7-088-243-5421 |
+| 9-485-129-8141 |
+| 1-558-406-5111 |
+| 9-126-689-3391 |
+| 7-425-322-3281 |
+| 4-392-374-6041 |
+| 4-304-389-1871 |
+| 4-903-971-0381 |
+| 1-589-891-6781 |
+| 3-636-511-3341 |
+| 5-836-355-3561 |
+| 7-837-902-4761 |
+| 3-218-632-1551 |
+| 1-810-162-2061 |
+| 2-895-273-7861 |
+| 3-304-941-9461 |
+| 2-529-916-6891 |
+| 6-200-103-4031 |
+| 6-076-058-0321 |
+| 9-905-378-2171 |
+| 6-749-178-7831 |
+| 3-117-867-7011 |
+| 8-011-234-5381 |
+| 9-305-769-7041 |
+| 0-221-879-4081 |
+| 6-234-876-7331 |
+| 9-085-519-0021 |
+| 7-415-631-0991 |
+| 3-976-639-5851 |
+| 7-841-707-4291 |
+| 8-067-623-1841 |
+| 1-050-422-8531 |
+| 2-394-865-3961 |
+| 4-329-408-4941 |
++----------------+
+660 rows in set (0.01 sec)
+
+
+
