@@ -1,0 +1,13 @@
+
+mysql> SELECT SUM(Phone.subtype="landline") AS Landlines,
+    -> SUM(Phone.subtype="cellular") AS Cellular,
+    -> SUM(Phone.subtype="fax") AS Fax
+    -> FROM Entry
+    -> JOIN Phone ON Phone.entryId = Entry.id                                                                                                               
+    -> WHERE Entry.birthday BETWEEN "1950-10-01 00:00:00" AND "1960-10-31 00:00:00";                                                                        
++-----------+----------+------+
+| Landlines | Cellular | Fax  |
++-----------+----------+------+
+|       172 |      139 |  135 |
++-----------+----------+------+
+1 row in set (0.00 sec)
