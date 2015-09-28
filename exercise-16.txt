@@ -1,0 +1,19 @@
+
+mysql> SELECT AddressLine1, INSERT(AddressLine1, (LOCATE("-", AddressLine1)) + 1, 4, CEIL(RAND()*(9999-1000)+10)) AS "New Address"
+    -> FROM Address
+    -> WHERE id >=715 && id <= 800 && type="other" && LOCATE("-", AddressLine1) != 0    -> LIMIT 10;
++--------------------------+--------------------------+
+| AddressLine1             | New Address              |
++--------------------------+--------------------------+
+| Ap #386-6225 Purus. St.  | Ap #386-7815 Purus. St.  |
+| Ap #794-6514 Lorem St.   | Ap #794-8731 Lorem St.   |
+| 507-8762 Risus Ave       | 507-2204 Risus Ave       |
+| Ap #390-9621 Montes, Ave | Ap #390-2814 Montes, Ave |
+| Ap #587-8830 Dui. Av.    | Ap #587-7448 Dui. Av.    |
+| 355-6963 Eu, Ave         | 355-1789 Eu, Ave         |
+| Ap #217-3888 Et Street   | Ap #217-4588 Et Street   |
+| 770-2070 Auctor Road     | 770-8566 Auctor Road     |
+| 832-8054 Enim Rd.        | 832-2058 Enim Rd.        |
+| Ap #451-2194 Nunc St.    | Ap #451-2578 Nunc St.    |
++--------------------------+--------------------------+
+10 rows in set (0.00 sec)
