@@ -1,0 +1,55 @@
+
+(From the decodemtl_addressbook database)
+
+mysql> SELECT DATE_FORMAT(createdOn,'%b %d %Y %H:%i %p') AS "Created On", DATE_FORMAT(`modifiedOn`,'%D %y %a %d %m %b %j') AS "Modified On" FROM AddressBook;                                                                                       
+
+(.......)
+
+| Feb 28 2016 02:23 AM | 30th 15 Wed 30 12 Dec 364 |
+| Jun 05 2016 21:58 PM | 20th 15 Mon 20 04 Apr 110 |
+| Nov 05 2014 23:56 PM | 18th 15 Mon 18 05 May 138 |
+| Oct 13 2015 03:16 AM | 23rd 15 Wed 23 09 Sep 266 |
+| Nov 25 2014 21:10 PM | 6th 15 Sat 06 06 Jun 157  |
+| Nov 04 2014 06:36 AM | 19th 16 Fri 19 08 Aug 232 |
+| Feb 28 2016 00:28 AM | 12th 15 Fri 12 06 Jun 163 |
+| Mar 27 2015 02:37 AM | 27th 15 Tue 27 10 Oct 300 |
+| Mar 05 2016 08:59 AM | 4th 14 Thu 04 12 Dec 338  |
+| Feb 24 2016 23:28 PM | 10th 15 Fri 10 04 Apr 100 |
+| May 13 2015 19:22 PM | 9th 16 Sat 09 01 Jan 009  |
+| Nov 20 2015 16:11 PM | 7th 15 Wed 07 10 Oct 280  |
+| Oct 17 2015 08:00 AM | 26th 16 Tue 26 01 Jan 026 |
+| Sep 04 2016 07:27 AM | 23rd 14 Tue 23 12 Dec 357 |
+| Dec 11 2014 07:50 AM | 26th 16 Sun 26 06 Jun 178 |
+| Jul 21 2016 17:55 PM | 21st 16 Sun 21 02 Feb 052 |
+| Jul 04 2016 15:46 PM | 8th 16 Sun 08 05 May 129  |
+| Feb 17 2015 07:15 AM | 28th 15 Tue 28 04 Apr 118 |
+| Feb 02 2015 02:48 AM | 20th 16 Wed 20 04 Apr 111 |
+| Nov 29 2014 02:41 AM | 28th 16 Thu 28 07 Jul 210 |
+| May 08 2016 16:29 PM | 8th 14 Wed 08 10 Oct 281  |
+| May 26 2016 09:16 AM | 19th 14 Fri 19 09 Sep 262 |
+| Apr 24 2015 20:29 PM | 14th 15 Sat 14 03 Mar 073 |
+| Aug 10 2015 20:52 PM | 11th 15 Wed 11 02 Feb 042 |
+| Apr 18 2016 06:00 AM | 11th 15 Fri 11 09 Sep 254 |
+| Mar 26 2016 23:16 PM | 31st 15 Sat 31 01 Jan 031 |
+| Jun 20 2015 07:04 AM | 6th 16 Tue 06 09 Sep 250  |
+| Aug 25 2015 20:30 PM | 17th 15 Fri 17 04 Apr 107 |
+| Nov 24 2014 05:00 AM | 28th 16 Mon 28 03 Mar 088 |
+| Jan 04 2016 23:37 PM | 26th 16 Fri 26 02 Feb 057 |
+| May 22 2015 07:05 AM | 22nd 16 Fri 22 01 Jan 022 |
+| Apr 11 2016 19:57 PM | 2nd 15 Fri 02 10 Oct 275  |
+| Jun 07 2015 16:33 PM | 13th 15 Tue 13 10 Oct 286 |
+| Sep 02 2015 20:05 PM | 22nd 15 Sun 22 11 Nov 326 |
+| Jan 28 2016 21:01 PM | 13th 15 Fri 13 03 Mar 072 |
+| Aug 27 2016 20:54 PM | 14th 15 Wed 14 01 Jan 014 |
+| Apr 10 2016 15:36 PM | 1st 15 Wed 01 07 Jul 182  |
+| Jul 23 2015 21:34 PM | 10th 15 Sun 10 05 May 130 |
+| Apr 16 2016 00:07 AM | 12th 15 Fri 12 06 Jun 163 |
+| Oct 18 2014 00:42 AM | 6th 15 Tue 06 10 Oct 279  |
+| Mar 17 2016 08:19 AM | 31st 15 Fri 31 07 Jul 212 |
+| Nov 18 2015 11:21 AM | 10th 15 Tue 10 03 Mar 069 |
+| Jan 28 2016 16:16 PM | 14th 16 Thu 14 04 Apr 105 |
++----------------------+---------------------------+
+1100 rows in set (0.00 sec)
+
+
+
