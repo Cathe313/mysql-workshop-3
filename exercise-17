@@ -1,0 +1,56 @@
+
+mysql> SELECT AddressLine1, City, LENGTH(CONCAT(AddressLine1, City)) AS Length
+    -> FROM Address
+    -> ORDER BY Length;
+
+(...........)
+
+| P.O. Box 680, 5051 Ipsum Avenue        | Geertruidenberg                  |     46 |
+| P.O. Box 300, 2542 Tellus, Street      | San Francisco                    |     46 |
+| P.O. Box 300, 7074 Amet Street         | Sint-Kruis-Winkel                |     47 |
+| Ap #725-6531 Fermentum Rd.             | Saint-Maur-des-Fossés            |     47 |
+| P.O. Box 456, 5438 Rhoncus. Rd.        | La Seyne-sur-Mer                 |     47 |
+| P.O. Box 893, 8466 Consectetuer Road   | Ikot Ekpene                      |     47 |
+| 918-8120 Imperdiet Rd.                 | L'Hospitalet de Llobregat        |     47 |
+| P.O. Box 621, 5631 Mi Rd.              | Colleretto Castelnuovo           |     47 |
+| P.O. Box 270, 2104 Sit Rd.             | Campos dos Goytacazes            |     47 |
+| 459-7749 Sem Street                    | Sant'Egidio del Monte Albino     |     47 |
+| Ap #345-1166 Convallis Avenue          | Caprino Bergamasco               |     47 |
+| P.O. Box 142, 3481 Eros Rd.            | Campos dos Goytacazes            |     48 |
+| P.O. Box 842, 4906 Ante. Avenue        | Salon-de-Provence                |     48 |
+| P.O. Box 298, 5538 Eleifend. Av.       | Annapolis County                 |     48 |
+| P.O. Box 568, 7701 Consectetuer Road   | Deschambault                     |     48 |
+| P.O. Box 425, 5152 Pede. Avenue        | Fort Saskatchewan                |     48 |
+| Ap #460-7637 Lectus. St.               | Santa Coloma de Gramenet         |     48 |
+| P.O. Box 632, 7941 Eget Road           | San Mauro Marchesato             |     48 |
+| P.O. Box 980, 5710 Tristique Av.       | North Battleford                 |     48 |
+| P.O. Box 988, 2793 Proin Rd.           | San José de Alajuela             |     48 |
+| P.O. Box 906, 5292 Magna Rd.           | Aparecida de Goiânia             |     48 |
+| 651-8983 Aliquam Avenue                | L'Hospitalet de Llobregat        |     48 |
+| P.O. Box 810, 3121 Vulputate Rd.       | San Rafael Abajo                 |     48 |
+| P.O. Box 313, 883 Phasellus Av.        | Cisano Bergamasco                |     48 |
+| P.O. Box 438, 9195 Fermentum Ave       | K?dzierzyn-Ko?le                 |     48 |
+| P.O. Box 597, 2994 Convallis Avenue    | Orciano Pisano                   |     49 |
+| P.O. Box 822, 1439 Dictum Avenue       | Alcalá de Henares                |     49 |
+| P.O. Box 602, 2674 Tristique Rd.       | Torrejón de Ardoz                |     49 |
+| Ap #628-7437 Sapien Street             | Ostrowiec ?wi?tokrzyski          |     49 |
+| P.O. Box 626, 8672 Sollicitudin Avenue | Aberystwyth                      |     49 |
+| P.O. Box 697, 2078 Aliquet Rd.         | Saint-Dié-des-Vosges             |     50 |
+| Ap #847-3452 Tincidunt Rd.             | Villafranca in Lunigiana         |     50 |
+| Ap #107-5148 Ullamcorper. Road         | Stargard Szczeci?ski             |     50 |
+| P.O. Box 380, 8838 Mauris Rd.          | Ospedaletto Lodigiano            |     50 |
+| P.O. Box 142, 7945 Felis Rd.           | Santo Stefano Quisquina          |     51 |
+| Ap #959-4549 Nullam Street             | L'Hospitalet de Llobregat        |     51 |
+| P.O. Box 770, 1908 Elit Rd.            | Saint-Eug?ne-de-Ladri?re         |     51 |
+| P.O. Box 880, 7019 Justo. Ave          | Saint-Eug?ne-de-Guigues          |     52 |
+| P.O. Box 382, 466 Nam Ave              | Sint-Gillis-bij-Dendermonde      |     52 |
+| P.O. Box 998, 9170 Luctus Av.          | Jaboatão dos Guararapes          |     52 |
+| P.O. Box 999, 8706 Cursus Rd.          | Saint-Eug?ne-de-Ladri?re         |     53 |
+| P.O. Box 284, 8548 Sed St.             | San Juan (San Juan de Tibás)     |     54 |
+| P.O. Box 606, 269 Scelerisque Avenue   | Cisterna di Latina               |     54 |
+| P.O. Box 492, 1647 Consectetuer Av.    | Sint-Kwintens-Lennik             |     55 |
+| P.O. Box 334, 5405 Consectetuer Avenue | Sint-Denijs-Westrem              |     57 |
+| P.O. Box 345, 7120 Cras St.            | Curon Venosta/Graun im Vinschgau |     59 |
++----------------------------------------+----------------------------------+--------+
+2300 rows in set (0.01 sec)
+
